@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="home-nav">
+      <div class="title-area">
+        <h1 id="shortcut-home">WildPedia</h1>
+      </div>
+      <div class="section-area">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#topic">Topic</a></li>
+          <li><a href="#profile">Creators</a></li>
+          <li><a href="" onclick="alert('under construction')">Game</a></li>
+        </ul>
+      </div>
+      <div class="user-area">
+        <button onclick="sign_up()" id="signup-btn">Sign Up</button>
+        <button onclick="log_in()" id="login-btn">Log In</button>
+      </div>
+    </nav>
+    <div class="container" id="container">
+      <div class="left-container" id="left-container">
+        <section class="content-block" id="home">
+          <header>
+            <h1>WildPedia</h1>
+            <p>Discover the Wonders of the Animal Kingdom</p>
+          </header>
+          <div class="home-content">
+            <div class="mammals-content">
+              <img src="default.jpg" alt="" />
+              <p>
+                Animals live in a wide variety of habitats — from deep oceans,
+                lush forests, dry deserts, to snowy mountains. Each habitat
+                provides unique conditions for survival, and exploring them
+                helps us understand how animals adapt to their environments.
+              </p>
+            </div>
+            <div class="birds-content">
+              <img src="default.jpg" alt="" />
+              <p>
+                From mammals with fur and live births, birds with feathers and
+                wings, reptiles with scales, to amphibians and fish — the
+                diversity of animal life is astonishing. Discover how these
+                groups differ and what makes them special.
+              </p>
+            </div>
+            <div class="reptiles-content">
+              <img src="default.jpg" alt="" />
+              <p>
+                Food plays a major role in animal survival. Some animals are
+                herbivores that thrive on plants, others are carnivores that
+                hunt for meat, while many are omnivores eating both. Learn how
+                diet shapes their behavior and survival strategies.
+              </p>
+            </div>
+            <div class="learn-button-content">
+              <p>Learn More About Them</p>
+              <button
+                class="learn-more-btn"
+                onclick="window.location.href='#topic'"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="content-block" id="about">
+          <div class="about-container">
+            <h1>About</h1>
+            <p>
+              This website was created to provide a simple and fun way of
+              learning about animals. Here, you can explore different types of
+              animals, their habitats, diets, and even how they are being
+              conserved today.
+            </p>
+            <p>
+              The goal of this project is to raise awareness and appreciation
+              for the beauty and importance of animals in our world. Whether
+              extinct or living, animals play a big role in keeping our
+              ecosystems balanced.
+            </p>
+            <p>
+              Explore, learn, and be inspired to protect the creatures we share
+              the Earth with.
+            </p>
+          </div>
+        </section>
+        <section class="content-block" id="topic">
+          <div class="topic-container" id="topic-container">
+            <div class="topic-cards">
+              <h2>Habitat</h2>
+              <img src="default.jpg" alt="" />
+              <button onclick="habitat_cards()">Learn Now</button>
+            </div>
+            <div class="topic-cards">
+              <h2>Type Of Animals</h2>
+              <img src="default.jpg" alt="" />
+              <button>Learn Now</button>
+            </div>
+            <div class="topic-cards">
+              <h2>Diet</h2>
+              <img src="default.jpg" alt="" />
+              <button>Learn Now</button>
+            </div>
+            <div class="topic-cards">
+              <h2>Conservation</h2>
+              <img src="default.jpg" alt="" />
+              <button>Learn Now</button>
+            </div>
+          </div>
+          <!-- Habitat Container if he click habitat-cards -->
+          <div class="habitat-container" id="habitat-container">
+            <div class="habitat-cards">
+              <h2>Topic Area</h2>
+              <img src="default.jpg" alt="" />
+              <button onclick="topic_cards()">Back</button>
+            </div>
+            <div class="habitat-cards">
+              <h2>Sea</h2>
+              <img src="default.jpg" alt="" />
+              <button
+                onclick="window.location.href='../assets/html/habitat/sea.html'"
+              >
+                Learn Now
+              </button>
+            </div>
+            <div class="habitat-cards">
+              <h2>Forest</h2>
+              <img src="default.jpg" alt="" />
+              <button>Learn Now</button>
+            </div>
+            <div class="habitat-cards">
+              <h2>Land</h2>
+              <img src="default.jpg" alt="" />
+              <button>Learn Now</button>
+            </div>
+            <div class="habitat-cards">
+              <h2>Desert</h2>
+              <img src="default.jpg" alt="" />
+              <button>Learn Now</button>
+            </div>
+          </div>
+          <!-- Habitat Container if user click animal-type-cards -->
+          <div class="animals-type-container" style="display: none"></div>
+          <!-- Habitat Container if user click diet-cards -->
+          <div class="diet-container" style="display: none"></div>
+          <!-- Habitat Container if user click conservation-cards -->
+          <div class="conservation-container" style="display: none"></div>
+        </section>
+        <section class="content-block" id="profile">
+          <div class="developed-text-area">
+            <h2>Developed by / Designed by:</h2>
+          </div>
+          <div class="developer-name-area">
+            <center><h1>UNDER DEVELOPMENT</h1></center>
+          </div>
+        </section>
+      </div>
+      <div class="right-container" id="right-container">
+        <header class="header-container" id="header-container">
+          <div class="top">
+            <h1 id="header-title">Sign Up</h1>
+          </div>
+          <div class="top">
+            <button onclick="close_panel()">X</button>
+          </div>
+        </header>
+        <div class="signup-form-wrapper" id="signup-form-wrapper">
+          <form action="#" method="post" class="form-container">
+            <div class="signup-form">
+              <label for="username">Username</label>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="signup-form">
+              <label for="password">Password</label>
+              <input type="text" placeholder="Password" />
+            </div>
+            <div class="signup-form">
+              <label for="password">Confirm Password</label>
+              <input type="text" placeholder="Password" />
+            </div>
+            <div class="signup-form">
+              <button>Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
