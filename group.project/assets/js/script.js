@@ -82,3 +82,14 @@ signup_btn.addEventListener("mouseleave", () => {
     login_btn.classList.add("active-button");
   }
 });
+
+
+function reveal_pass() {
+    const reveal_pass = document.getElementById("reveal-pass");
+    const signup_pass = document.getElementById("signup-password");
+    reveal_pass.addEventListener("change", e => {
+        if (reveal_pass.checked) {
+            signup_pass.type ? "text" : "password";
+        }
+    })
+}  
